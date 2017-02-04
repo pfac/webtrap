@@ -6,8 +6,7 @@ module Squealer
       class SendRequest
         def matches?(transmission_proc)
           perform_transmission(transmission_proc)
-          puts request_sent.inspect
-          request_sent
+          request_sent?
         end
 
         def failure_message
@@ -18,9 +17,11 @@ module Squealer
           true
         end
 
-        private
+        def with_xml(xml)
+          SendRequestWithXml.new(xml)
+        end
 
-        attr_reader :request_sent
+        private
 
         def perform_transmission(transmission_proc)
           WebMock.disable_net_connect!
@@ -31,6 +32,10 @@ module Squealer
             @request_sent = true
           end
           WebMock.allow_net_connect!
+        end
+
+        def request_sent?
+          @request_sent
         end
       end
     end

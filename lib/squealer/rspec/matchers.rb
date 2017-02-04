@@ -1,4 +1,5 @@
 require "squealer/rspec/matchers/send_request"
+require "squealer/rspec/matchers/send_request_with_xml"
 
 module Squealer
   module RSpec
