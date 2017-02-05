@@ -5,7 +5,7 @@ After do
 end
 
 Given(/^a spec file with:$/) do |content|
-  @file = Tempfile.new
+  @file = Tempfile.new("webtrap")
   begin
     @file.write content
   ensure
