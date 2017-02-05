@@ -1,6 +1,6 @@
 require "sinatra"
 
-module Squealer
+module WebTrap
   class Server < Sinatra::Base
     @payload_was_valid = false
     @request_received = false

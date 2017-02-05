@@ -1,6 +1,6 @@
 require "webmock/rspec"
 
-module Squealer
+module WebTrap
   module RSpec
     module Matchers
       class SendRequest

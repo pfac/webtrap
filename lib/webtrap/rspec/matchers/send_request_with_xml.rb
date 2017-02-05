@@ -1,7 +1,7 @@
 require "equivalent-xml"
 require "webmock/rspec"
 
-module Squealer
+module WebTrap
   module RSpec
     module Matchers
       class SendRequestWithXml < SendRequest
@@ -40,7 +40,7 @@ module Squealer
         def server
           expected_payload = self.expected_payload
 
-          @_server ||= ::Class.new(::Squealer::Server) do
+          @_server ||= ::Class.new(::WebTrap::Server) do
             @payload_was_valid = false
             @request_received = false
 

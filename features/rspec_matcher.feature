@@ -3,7 +3,7 @@ Feature: RSpec matcher
   Scenario: expect{...}.to send_request
     Given a spec file with:
       """ruby
-      require "squealer/rspec"
+      require "webtrap/rspec"
 
       RSpec.describe Net::HTTP, "#get" do
         it "should send a request" do
@@ -25,7 +25,7 @@ Feature: RSpec matcher
   Scenario: expect{...}.to send_request.with_xml(...)
     Given a spec file with:
       """ruby
-      require "squealer/rspec"
+      require "webtrap/rspec"
 
       RSpec.describe Net::HTTP, "#get" do
         let :xml do
