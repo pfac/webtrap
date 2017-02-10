@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-has_compatible_ruby () {
+_webtrap_has_compatible_ruby () {
   if ! type ruby > /dev/null 2>&1; then
     return 1
   fi
@@ -10,22 +10,22 @@ has_compatible_ruby () {
   [ "$major_version" -ge "2" ]
 }
 
-has_gem () {
+_webtrap_has_gem () {
   type gem > /dev/null 2>&1
 }
 
-has_bundler () {
+_webtrap_has_bundler () {
   type bundler > /dev/null 2>&1
 }
 
-setup () {
-  if ! has_compatible_ruby || ! has_gem; then
+_webtrap_setup () {
+  if ! _webtrap_has_compatible_ruby || ! _webtrap_has_gem; then
     echo '* Compatible Ruby environment not found' >&2
     echo 'WebTrap Setup error: this project requires MRI 2.0+ to be available.' >&2
     exit 1
   fi
 
-  if ! has_bundler; then
+  if ! _webtrap_has_bundler; then
     echo '* Bundler not found.'
     echo 'WebTrap Setup error: this project requires Bundler to be available.' >&2
     exit 2
@@ -37,4 +37,4 @@ setup () {
   echo '* All done'
 }
 
-setup "$@"
+_webtrap_setup "$@"

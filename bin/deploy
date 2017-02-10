@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+_webtrap_has_gem () {
+  type gem > /dev/null 2>&1
+}
+
+_webtrap_deploy () {
+  if ! _webtrap_has_gem; then
+    echo '* Compatible Ruby environment not found' >&2
+    echo 'WebTrap Setup error: this project requires a compatible Ruby environment.' >&2
+    exit 1
+  fi
+
+  gem push "$(gem build webtrap.gemspec | grep "File:" | cut -d\  -f4)"
+}
+
+_webtrap_deploy "$@"
