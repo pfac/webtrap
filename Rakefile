@@ -1,5 +1,15 @@
-require "cucumber/rake/task"
+# frozen_string_literal: true
 
-Cucumber::Rake::Task.new(:features)
+namespace :lint do
+  require "rubocop/rake_task"
+  RuboCop::RakeTask.new(:ruby)
+end
+task lint: %i(lint:ruby)
 
-task default: [:features]
+namespace :test do
+  require "cucumber/rake/task"
+  Cucumber::Rake::Task.new(:acceptance)
+end
+task test: %i(test:acceptance)
+
+task default: %i(lint test)
