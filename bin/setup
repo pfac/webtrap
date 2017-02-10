@@ -1,0 +1,40 @@
+#!/usr/bin/env sh
+
+has_compatible_ruby () {
+  if ! type ruby > /dev/null 2>&1; then
+    return 1
+  fi
+
+  local major_version=`ruby --version | cut -d\  -f2 | cut -dp -f1 | cut -d. -f1`
+
+  [ "$major_version" -ge "2" ]
+}
+
+has_gem () {
+  type gem > /dev/null 2>&1
+}
+
+has_bundler () {
+  type bundler > /dev/null 2>&1
+}
+
+setup () {
+  if ! has_compatible_ruby || ! has_gem; then
+    echo '* Compatible Ruby environment not found' >&2
+    echo 'WebTrap Setup error: this project requires MRI 2.0+ to be available.' >&2
+    exit 1
+  fi
+
+  if ! has_bundler; then
+    echo '* Bundler not found.'
+    echo 'WebTrap Setup error: this project requires Bundler to be available.' >&2
+    exit 2
+  fi
+
+  echo '* Checking dependencies'
+  (bundle check || bundle install) > /dev/null
+
+  echo '* All done'
+}
+
+setup "$@"
