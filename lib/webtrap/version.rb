@@ -2,5 +2,5 @@
 
 module WebTrap
   # Current version of the WebTrap gem.
-  VERSION = "0.0.0"
+  VERSION = "0.0.1"
 end
