@@ -3,7 +3,7 @@ PATH
   specs:
     webtrap (0.0.1)
       equivalent-xml (~> 0.6.0)
-      rack (~> 2.0)
+      rack (~> 1.0)
       rspec (~> 3.0)
       webmock (~> 2.0)
 
@@ -50,7 +50,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (2.0.5)
-    rack (2.0.1)
+    rack (1.6.5)
     rainbow (2.2.1)
     rake (10.4.2)
     rspec (3.5.0)

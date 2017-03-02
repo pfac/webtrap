@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "equivalent-xml", "~> 0.6.0"
-  spec.add_dependency "rack", "~> 2.0"
+  spec.add_dependency "rack", "~> 1.0"
   spec.add_dependency "rspec", "~> 3.0"
   spec.add_dependency "webmock", "~> 2.0"
 

@@ -48,7 +48,8 @@ module WebTrap
         # Message to be shown if the expectation fails to pass.
         # @return [String]
         def failure_message
-          failed_validator&.message
+          return if failed_validator.nil?
+          failed_validator.message
         end
 
         # @api private

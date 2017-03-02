@@ -4,6 +4,7 @@ Feature: RSpec matcher
     Given a spec file with:
       """ruby
       require "webtrap/rspec"
+      require "net/http"
 
       RSpec.describe Net::HTTP, "#get" do
         it "should send a request" do
@@ -26,6 +27,7 @@ Feature: RSpec matcher
     Given a spec file with:
       """ruby
       require "webtrap/rspec"
+      require "net/http"
 
       RSpec.describe Net::HTTP, "#get" do
         let :xml do
