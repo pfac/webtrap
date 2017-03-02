@@ -7,7 +7,7 @@ class WebTrap::Shared::Validators::RequestSentValidator
     @failed
   end
 
-  def validate(request)
+  def validate(_)
     @failed = false
     self
   end

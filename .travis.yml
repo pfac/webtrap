@@ -11,6 +11,6 @@ rvm:
   - 2.3.3
   - 2.4.0
   - ruby-head
-before_install: gem install bundler -v 1.13.6
+before_install: gem install bundler
 script:
-  - bundle exec cucumber
+  - bundle exec rake
