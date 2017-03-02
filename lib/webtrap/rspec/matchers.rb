@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
-require "webtrap/rspec/matchers/send_request"
-require "webtrap/rspec/matchers/send_request_with_xml"
-
 module WebTrap
   module RSpec
     # WebTrap::RSpec::Matchers provides the set of matchers available to define
     # expections about outgoing requests.
     module Matchers
+      autoload :SendRequest, "webtrap/rspec/matchers/send_request"
+
       # Passes if the block sends any HTTP request.
       #
       # @return [SendRequest]

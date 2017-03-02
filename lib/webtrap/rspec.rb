@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "webtrap/server"
-
 require "webtrap/rspec/matchers"
 
 module WebTrap
