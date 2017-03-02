@@ -82,7 +82,7 @@ module WebTrap
         end
 
         def app
-          @_app ||= Shared::MockAppGenerator.generate(validators)
+          @_app ||= Shared::RackAppGenerator.generate(validators)
         end
       end
     end
