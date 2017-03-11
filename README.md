@@ -5,6 +5,7 @@ WebTrap
 [![Build Status](https://travis-ci.org/pfac/webtrap.svg?branch=master)](https://travis-ci.org/pfac/webtrap)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pfac/webtrap.svg)](https://gemnasium.com/github.com/pfac/webtrap)
 [![Code Climate](https://codeclimate.com/github/pfac/webtrap/badges/gpa.svg)](https://codeclimate.com/github/pfac/webtrap)
+[![Documentation](https://img.shields.io/badge/docs-plastic-green.svg)](http://www.relishapp.com/pfac/webtrap/docs)
 [![Inch CI](https://inch-ci.org/github/pfac/webtrap.svg?branch=master)](https://inch-ci.org/github/pfac/webtrap)
 
 WebTrap allows you to write tests that assert on outgoing requests. This allows
