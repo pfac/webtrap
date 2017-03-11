@@ -5,8 +5,11 @@ WebTrap
 [![Build Status](https://travis-ci.org/pfac/webtrap.svg?branch=master)](https://travis-ci.org/pfac/webtrap)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pfac/webtrap.svg)](https://gemnasium.com/github.com/pfac/webtrap)
 [![Code Climate](https://codeclimate.com/github/pfac/webtrap/badges/gpa.svg)](https://codeclimate.com/github/pfac/webtrap)
-[![Documentation](https://img.shields.io/badge/docs-0.0.1-brightgreen.svg?style=plastic)](http://www.relishapp.com/pfac/webtrap/docs)
-[![Inch CI](https://inch-ci.org/github/pfac/webtrap.svg?branch=master)](https://inch-ci.org/github/pfac/webtrap)
+
+Documentation:
+[![Usage Documentation](https://img.shields.io/badge/usage-0.0.1-brightgreen.svg?style=flat)](http://www.relishapp.com/pfac/webtrap/docs)
+[![API Documentation](https://img.shields.io/badge/api-0.0.1-brightgreen.svg?style=flat)](http://www.rubydoc.info/gems/webtrap)
+[![Documentation Coverage](https://inch-ci.org/github/pfac/webtrap.svg?branch=master)](https://inch-ci.org/github/pfac/webtrap)
 
 WebTrap allows you to write tests that assert on outgoing requests. This allows
 you to verify that such requests match the documentation of external services
