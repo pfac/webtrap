@@ -3,7 +3,7 @@ PATH
   specs:
     webtrap (0.0.1)
       equivalent-xml (~> 0.6.0)
-      rack (~> 1.0)
+      rack (~> 2.0)
       rspec (~> 3.0)
       webmock (~> 2.0)
 
@@ -69,9 +69,9 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (2.0.5)
-    rack (1.6.5)
+    rack (2.0.1)
     rainbow (2.2.1)
-    rake (10.4.2)
+    rake (12.0.0)
     relish (0.7.1)
       archive-tar-minitar (>= 0.5.2)
       json (>= 1.4.6)
@@ -119,7 +119,7 @@ DEPENDENCIES
   bundler (~> 1.13)
   cucumber (~> 2.0)
   pry-remote (~> 0.1.8)
-  rake (~> 10.0)
+  rake (~> 12.0)
   relish (~> 0.7.1)
   rubocop (~> 0.47.1)
   webtrap!
