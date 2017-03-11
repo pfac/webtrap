@@ -2,15 +2,16 @@
 
 module WebTrap
   module RSpec
-    # WebTrap::RSpec::Matchers provides the set of matchers available to define
-    # expections about outgoing requests.
+    # Set of matchers available to define expections about outgoing requests.
     module Matchers
       autoload :SendRequest, "webtrap/rspec/matchers/send_request"
 
-      # Passes if the block sends any HTTP request.
+      # Passes if the expectation block sends an HTTP request.
+      #
+      # Constraints to specify the expected request can be chained.
       #
       # @return [SendRequest]
-      #   The matcher to verify that the request is sent.
+      #   The matcher instance to verify that a request is sent.
       def send_request
         SendRequest.new
       end

@@ -8,9 +8,18 @@ module WebTrap
   module RSpec
     module Matchers
       # @api private
-      # Provides the implementation for `send_request`.
+      # Provides the implementation for <code>send_request</code>.
+      #
       # Not intended to be instantiated directly.
+      #
+      # @see http://www.rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers/MatcherProtocol RSpec Matcher Protocol
       class SendRequest
+        # Initialize a new matcher.
+        #
+        # Unless more constraints are chained, this matcher will pass as long
+        # as any HTTP request gets intercepted.
+        #
+        # @see Shared::Validators::RequestSentValidator
         def initialize
           add_validator(Shared::Validators::RequestSentValidator.new)
         end
@@ -19,33 +28,36 @@ module WebTrap
         # Specifies the XML payload of the request.
         #
         # The expectation will pass only if a request is sent with a payload
-        # that is considered equivalent to the reference. For further details
-        # see the {https://github.com/mbklein/equivalent-xml equivalent-xml}
-        # gem.
+        # that is considered equivalent to the reference.
         #
-        # @param xml [] The reference XML payload.
-        # @return [SendRequestWithXml]
-        #   The matcher to verify that a request is with a payload equivalent
-        #   to the reference.
+        # @param xml [String]
+        #   The reference XML payload.
+        # @return [SendRequest]
+        #   This matcher instance, to allow further chaining.
+        # @see Shared::Validators::EquivalentXmlContentValidator
         def with_xml(xml)
           add_validator(Shared::Validators::EquivalentXmlContentValidator.new(xml))
           self
         end
 
         # @api private
-        # Checks if the provided Proc sends an HTTP request.
+        # Whether a request was intercepted that matches all validators.
+        #
+        # Executes the provided proc, intercepting all transmitted HTTP requests
+        # and running them through the set of validators.
+        #
         # @param transmission_proc [Proc]
-        #   The proc that should send an HTTP request.
-        # @return
-        #   Whether an HTTP request was sent.
-        # @see {RSpec::Matchers::MatcherProtocol#matches?}
+        #   The proc that is expected to send the requests.
+        # @return {Boolean}
         def matches?(transmission_proc)
           perform_transmission(transmission_proc)
           failure_message.nil?
         end
 
         # @api private
-        # Message to be shown if the expectation fails to pass.
+        # Message to be shown if no request is intercepted for which all
+        # validators are successful.
+        #
         # @return [String]
         def failure_message
           return if failed_validator.nil?
@@ -54,7 +66,8 @@ module WebTrap
 
         # @api private
         # Allows the matcher to be used with block expectations.
-        # @return [TrueClass]
+        #
+        # @return [true]
         def supports_block_expectations?
           true
         end
