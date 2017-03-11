@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# @api private
 class WebTrap::Shared::Validators::RequestSentValidator
   def initialize
     @failed = true

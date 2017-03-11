@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# @api private
 class WebTrap::Shared::RackApp
   def initialize(validators)
     @validators = validators

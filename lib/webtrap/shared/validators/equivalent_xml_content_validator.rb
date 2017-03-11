@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require "equivalent-xml"
 
+# @api private
 class WebTrap::Shared::Validators::EquivalentXmlContentValidator
   def initialize(xml)
     @failed = true

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "webtrap/shared/validators"
 
 module WebTrap
