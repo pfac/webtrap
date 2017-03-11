@@ -61,7 +61,7 @@ module WebTrap
         # @return [String]
         def failure_message
           return if failed_validator.nil?
-          failed_validator.message
+          failed_validator.failure_message
         end
 
         # @api private

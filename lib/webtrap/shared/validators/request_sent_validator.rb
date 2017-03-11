@@ -22,7 +22,6 @@ class WebTrap::Shared::Validators::RequestSentValidator
     "expected block to send an HTTP request, but nothing was sent out"
   end
 
-
   # Validate a request.
   #
   # Since validators are run against intercepted requests this validator will
