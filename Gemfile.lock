@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    webtrap (0.1.0)
+    webtrap (0.1.1)
       equivalent-xml (~> 0.6.0)
       rack (~> 2.0)
       rspec (~> 3.0)
