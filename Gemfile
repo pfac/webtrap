@@ -6,5 +6,5 @@ gemspec
 
 group :documentation do
   gem "relish", "~> 0.7.1"
-  gem "yard", "~> 0.9.8"
+  gem "yard", "~> 0.9.12"
 end

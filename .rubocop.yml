@@ -10,10 +10,26 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
     - "spec/factories.rb"
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.2
+
+Layout/ExtraSpacing:
+  Exclude:
+    - "webtrap.gemspec"
+
+Layout/SpaceAroundOperators:
+  Exclude:
+    - "webtrap.gemspec"
+
+Metrics/BlockLength:
+  Exclude:
+    - "webtrap.gemspec"
 
 Metrics/LineLength:
   Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - "Gemfile"
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
