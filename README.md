@@ -7,8 +7,8 @@ WebTrap
 [![Code Climate](https://codeclimate.com/github/pfac/webtrap/badges/gpa.svg)](https://codeclimate.com/github/pfac/webtrap)
 
 Documentation:
-[![Usage Documentation](https://img.shields.io/badge/usage-0.1.0-brightgreen.svg?style=flat)](http://www.relishapp.com/pfac/webtrap/docs)
-[![API Documentation](https://img.shields.io/badge/api-0.1.0-brightgreen.svg?style=flat)](http://www.rubydoc.info/gems/webtrap)
+[![Usage Documentation](https://img.shields.io/badge/usage-0.1.1-brightgreen.svg?style=flat)](http://www.relishapp.com/pfac/webtrap/docs)
+[![API Documentation](https://img.shields.io/badge/api-0.1.1-brightgreen.svg?style=flat)](http://www.rubydoc.info/gems/webtrap)
 [![Documentation Coverage](https://inch-ci.org/github/pfac/webtrap.svg?branch=master)](https://inch-ci.org/github/pfac/webtrap)
 
 WebTrap allows you to write tests that assert on outgoing requests. This allows
