@@ -7,7 +7,7 @@ bundler_args: "--standalone --path ../bundle"
 rvm:
   - 2.2.5
   - 2.3.3
-  - 2.4.0
+  - 2.4.3
   - ruby-head
 before_install: gem install bundler
 script:
